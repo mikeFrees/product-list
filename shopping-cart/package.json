@@ -29,14 +29,14 @@
       "not dead",
       "not op_mini all"
     ],
-    "repository":{
-      "type":"git",
-      "url": "https://github.com/mikeFrees/product-list.git"
-    },
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "repository":{
+      "type":"git",
+      "url": "https://github.com/mikeFrees/product-list.git"
   }
 }
