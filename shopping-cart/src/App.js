@@ -1,5 +1,5 @@
 import './App.css';
-import  {ButtonAddToCart, ButtonChangeAmount, ButtonArticle} from './Buttons';
+import  {ButtonArticle} from './Buttons';
 
 function App() {
   return (
