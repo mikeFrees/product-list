@@ -35,8 +35,12 @@
       "last 1 safari version"
     ]
   },
-  "repository":{
-      "type":"git",
-      "url": "https://github.com/mikeFrees/product-list.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeFrees/product-list.git"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "react-app-rewired": "^2.2.1"
   }
 }

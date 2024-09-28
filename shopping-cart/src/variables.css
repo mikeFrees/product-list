@@ -1,0 +1,5 @@
+:root {
+  --main-bg-color: #595;
+  --button-blank: white;
+  --button-selected: hsl(14, 86%, 42%);
+}
