@@ -2,50 +2,85 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 65%;
-  height: 5%;
-  border-radius: 7em;
-  background-color: var(--button-blank);
-  border: 1px solid var(--button-selected);
-  cursor: pointer;
+
   align-self: center;
-  margin: -2.5%;
+
+  width: 17rem;
+  height: 5rem;
+
+  padding: 1rem;
+  margin: -2.5rem;
+
+  background-color: var(--button-blank);
+
+  border: 0.1rem solid var(--button-selected);
+  border-radius: 7rem;
+
+  cursor: pointer;
+ 
+  font-familly: "Red Hat Text";
+  font-weight: 700;
+  
+  p {
+    margin-left: 1rem;
+  }
 }
 
 .changeAmount {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
-  height: 50px;
-  border-radius: 30px;
-  background-color: var(--button-selected);
-  border: 1px solid var(--button-selected);
-  cursor: pointer;
-  color: var(--button-blank);
+
   align-self: center;
-  margin: -25px;
-}
 
-.changeAmount button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid var(--button-blank);
-  svg {
-    color: var(--button-blank);
+  width: 17rem;
+  height: 5rem;
+
+  margin: -2.5rem;
+
+  background-color: var(--button-selected);
+  color: var(--button-blank);
+
+  border: 0.1rem solid var(--button-selected);
+  border-radius: 3rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+
+    margin: 1.25rem;
+
+    border-radius: 50%;
+    border: 0.2rem solid var(--button-blank);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    span {
+      font-familly: 'Red Hat Text', sans-serif;
+      font-weight: 400;
+
+      cursor: pointer;
+    }
+
+    svg {
+      color: var(--button-blank);
+    }
   }
-}
 
-.changeAmount button:active {
-  background-color: var(--button-blank);
-  border: 2px solid var(--button-selected);
-  svg {
-    color: var(--button-selected);
+  button:active {
+    background-color: var(--button-blank);
+
+    border: 0.2rem solid var(--button-selected);
+
+    svg {
+      color: var(--button-selected);
+    }
   }
 }

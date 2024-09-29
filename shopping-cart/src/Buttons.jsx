@@ -8,7 +8,7 @@ function ButtonAddToCart({ onAdd }) {
   return (
       <button className= {styles.addToCart} onClick={onAdd}>
         <ShoppingCart />
-        Add to Cart
+        <p>Add to Cart</p>
       </button>
   );
 }
