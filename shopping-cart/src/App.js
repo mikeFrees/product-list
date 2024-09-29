@@ -1,6 +1,5 @@
 import './App.css';
 import  {ItemCard} from './Item-card.jsx';
-import './variables.css'
 
 function App() {
   return (
