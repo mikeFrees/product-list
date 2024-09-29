@@ -14,12 +14,14 @@
   background-color: var(--button-blank);
 
   border: 0.1rem solid var(--button-selected);
-  border-radius: 7rem;
+  border-radius: 3rem;
 
   cursor: pointer;
  
-  font-familly: "Red Hat Text";
+  font-family: "Red Hat Text";
   font-weight: 700;
+
+  box-sizing: border-box;
   
   p {
     margin-left: 1rem;
@@ -62,9 +64,11 @@
 
     cursor: pointer;
 
+    box-sizing: border-box;
+
     span {
-      font-familly: 'Red Hat Text', sans-serif;
-      font-weight: 400;
+      font-family: 'Red Hat Text', sans-serif;
+      font-weight: 700;
 
       cursor: pointer;
     }
