@@ -8,9 +8,6 @@
   width: 20rem;
   height: 6rem;
 
-  padding: 1rem;
-  margin: -3rem;
-
   background-color: var(--button-blank);
 
   border: 0.1rem solid var(--button-selected);
@@ -39,8 +36,6 @@
   width: 20rem;
   height: 6rem;
 
-  margin: -3rem;
-
   background-color: var(--button-selected);
   color: var(--button-blank);
 
@@ -50,17 +45,18 @@
   font-family: "Red Hat Text", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
+  box-sizing: border-box;
 
   button {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 2.5rem;
+    width: 3rem;
     height: auto;
     aspect-ratio: 1 / 1;
 
-    margin: 1.25rem;
+    margin: 1.5rem;
 
     border-radius: 50%;
     border: 0.2rem solid var(--button-blank);

@@ -1,7 +1,8 @@
 .itemCard {
   display: flex;
   flex-direction: column;
-  height: 65rem;
+  height: 45rem;
+  width:auto;
   border-radius: 2rem;
   background-color: var(--main-bg-color);
 }
@@ -10,6 +11,7 @@
   border-radius: 2rem;
   height: 66%;
   width: auto;
+  margin-bottom: -3rem;
 }
 
 .itemDetails {
@@ -18,5 +20,26 @@
   justify-content: flex-end;
   align-items: start;
   text-align: start;
-  height: 33%;
+  height: 25%;
+  font-family: "Red Hat Text", sans-serif;
+
+  h2 {
+    color: var(--Rose-300);
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-top:0;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--Rose-900);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top:0;
+    margin-bottom: 1rem;
+  }
+}
+
+.itemPrice.itemPrice{
+  color: var(--red);
 }
