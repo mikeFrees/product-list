@@ -1,0 +1,13 @@
+.menu {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+
+h1 {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  color: var(--Rose-900);
+}

@@ -1,13 +1,14 @@
 .App {
-  padding: 2rem;
+  padding: 10rem;
   height: 100vh ;
   width: 100vw;
-  background: white;
+  background: var(--Rose-500);
   text-align: center;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  background-color: red;
+  background-color: white;
+  flex-direction: column;
 }
 
 html {
