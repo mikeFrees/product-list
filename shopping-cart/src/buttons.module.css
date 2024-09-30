@@ -5,11 +5,11 @@
 
   align-self: center;
 
-  width: 17rem;
-  height: 5rem;
+  width: 20rem;
+  height: 6rem;
 
   padding: 1rem;
-  margin: -2.5rem;
+  margin: -3rem;
 
   background-color: var(--button-blank);
 
@@ -18,8 +18,9 @@
 
   cursor: pointer;
  
-  font-family: "Red Hat Text";
+  font-family: "Red Hat Text", sans-serif;
   font-weight: 700;
+  font-size: 1.6rem;
 
   box-sizing: border-box;
   
@@ -35,16 +36,20 @@
 
   align-self: center;
 
-  width: 17rem;
-  height: 5rem;
+  width: 20rem;
+  height: 6rem;
 
-  margin: -2.5rem;
+  margin: -3rem;
 
   background-color: var(--button-selected);
   color: var(--button-blank);
 
   border: 0.1rem solid var(--button-selected);
   border-radius: 3rem;
+
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
 
   button {
     display: flex;
@@ -65,13 +70,6 @@
     cursor: pointer;
 
     box-sizing: border-box;
-
-    span {
-      font-family: 'Red Hat Text', sans-serif;
-      font-weight: 700;
-
-      cursor: pointer;
-    }
 
     svg {
       color: var(--button-blank);

@@ -1,7 +1,13 @@
 .App {
+  padding: 2rem;
   height: 100vh ;
+  width: 100vw;
   background: white;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
 }
 
 html {
