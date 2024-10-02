@@ -1,26 +1,25 @@
+import React from 'react';
 import './App.css';
 import  {Menu} from './Menu.jsx';
 import { Cart } from './Cart.jsx';
 
+export const OrderContext = React.createContext();
+
 function App() {
 
-  const order = [
-    {
-      amount: 0,
-      itemName: 'Classic Tiramisu',
-      itemPrice: 5.5,
-    },
-    {
-      amount: 0,
-      itemName: 'Classic Tiramisu',
-      itemPrice: 5.5,
-    }
-  ];
+  const [order, setOrder] = React.useState([]);
+
+  function stateChange(newOrder) {
+    setOrder(newOrder);
+  }
 
   return (
-    <div className="App">
-      <Cart order= {order}/>
-    </div>
+    <OrderContext.Provider value={{order, stateChange}}>
+      <div className="App">
+        <Menu />
+        <Cart order= {order}/>
+      </div>
+    </OrderContext.Provider>
   );
 }
 

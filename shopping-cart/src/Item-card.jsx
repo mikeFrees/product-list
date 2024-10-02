@@ -10,7 +10,7 @@ export function ItemCard({ item }) {
   return (
     <article className={styles.itemCard}>
       <img src={item.image.desktop} alt={item.name} className={styles.itemImage} />
-      <ButtonArticle />
+      <ButtonArticle item = {item}/>
       <div className={styles.itemDetails}>
         <h2 className={styles.itemCategory}>{item.category}</h2>
         <p className={styles.itemName}>{item.name}</p>

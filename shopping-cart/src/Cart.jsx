@@ -3,11 +3,19 @@ import styles from './Cart.module.css';
 import {ReactComponent as Tree} from './icons/icon-carbon-neutral.svg';
 import { ReactComponent as EmptySlice} from './icons/illustration-empty-cart.svg';
 import { ReactComponent as Remove } from './icons/icon-remove-item.svg';
+import { OrderContext } from './App';
 
-export function Cart({order}) {
+export function Cart() {
 
-  const orderTotal = order.reduce((total, product) => total += product.amount * product.itemPrice, 0);
-  const orderItems = order.reduce((total, product) => total += product.amount, 0);
+  const { order } = React.useContext(OrderContext);
+  let orderTotal = 0, orderItems = 0;
+
+  if (order.length) {
+    orderTotal = order.reduce((total, product) => total += product.amount * product.itemPrice, 0);
+    orderItems = order.reduce((total, product) => total += product.amount, 0);
+  }
+
+  
   
   if (orderTotal === 0) {
     return (<EmptyCart />);
@@ -34,7 +42,7 @@ function FullCart({order, orderTotal, orderItems}) {
   });
 
   const items = order.map( item => (
-    <div>
+    <div key={item.itemName}>
       <h3>{item.itemName}</h3>
       <p>{item.amount}x  @{USDollar.format(item.itemPrice)}  {USDollar.format(item.itemPrice * item.amount)}</p>
       <Remove />
