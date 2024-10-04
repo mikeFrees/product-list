@@ -29,23 +29,16 @@ function ButtonChangeAmount({ amount, onAdd, onReduce }) {
 }
 
 export function ButtonArticle({item}) {
-  const {order, stateChange} = React.useContext(OrderContext);
+  const {order, stateChange, amounts, updateAmount} = React.useContext(OrderContext);
   const [amount, setAmount] = React.useState(0);
 
-  if (amount === 0) {
-    return <ButtonAddToCart onAdd={() => updateOrder(true)} />;
-  } else {
-    return (
-      <ButtonChangeAmount 
-        amount={amount} 
-        onAdd={ () => updateOrder(true)}
-        onReduce={() => updateOrder(false)}
-        />
-    );
-  }
+  React.useEffect(() => {
+    const itemAmount = amounts[item.name] || 0;
+    setAmount(itemAmount);
+  },[amounts, item.name, order]);
 
   function updateOrder(increment) {
-    increment ? setAmount(amount + 1) : setAmount(amount - 1);
+    increment ? updateAmount(amount + 1, item.name) : updateAmount(amount - 1, item.name);
     let oldOrder = [...order];
     let update = false;
     for (let i = 0; i < oldOrder.length; i++) {
@@ -64,5 +57,17 @@ export function ButtonArticle({item}) {
       itemPrice: item.price,
     };
     update ? stateChange(oldOrder) : stateChange([...oldOrder, newOrder]);
+  }
+
+  if (amount === 0) {
+    return <ButtonAddToCart onAdd={() => updateOrder(true)} />;
+  } else {
+    return (
+      <ButtonChangeAmount 
+        amount={amount} 
+        onAdd={ () => updateOrder(true)}
+        onReduce={() => updateOrder(false)}
+        />
+    );
   }
 }

@@ -36,7 +36,7 @@ function EmptyCart() {
 }
 
 function FullCart({orderTotal, orderItems}) {
-  const {order, stateChange} = React.useContext(OrderContext);
+  const {order, stateChange, updateAmount} = React.useContext(OrderContext);
   let USDollar = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -46,19 +46,19 @@ function FullCart({orderTotal, orderItems}) {
     <div key={item.itemName}>
       <h3>{item.itemName}</h3>
       <p>{item.amount}x  @{USDollar.format(item.itemPrice)}  {USDollar.format(item.itemPrice * item.amount)}</p>
-      <Remove onClick={() => removeArticle(item.itemName)}/>
+      <Remove className={styles.removeButton} onClick={() => removeArticle(item.itemName)}/>
     </div>
   ));
 
   return (
-    <aside>
+    <aside className={styles.FullCart}>
       <h2>Your Cart ({orderItems})</h2>
 
       {items}
 
-      <p>Order Total <span>{USDollar.format(orderTotal)}</span></p>
+      <p className={styles.price}>Order Total <span>{USDollar.format(orderTotal)}</span></p>
 
-      <p><Tree />This is a <strong>carbon-neutral</strong> delivery</p>
+      <div className= {styles.carbon}><Tree /><p>This is a <strong>carbon-neutral</strong> delivery</p></div>
       <button>Confirm Order</button>
     </aside>
   );
@@ -73,6 +73,9 @@ function FullCart({orderTotal, orderItems}) {
         oldOrder.splice(i, 1);
       }
     };
-    if (update) stateChange(oldOrder);
+    if (update) {
+      stateChange(oldOrder);
+      updateAmount(0,item);
+    }
   }
 }

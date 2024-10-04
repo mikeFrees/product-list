@@ -10,7 +10,7 @@
 
   background-color: var(--button-blank);
 
-  border: 0.1rem solid var(--button-selected);
+  border: 0.1rem solid var(--Rose-400);
   border-radius: 3rem;
 
   cursor: pointer;
@@ -24,6 +24,11 @@
   p {
     margin-left: 1rem;
   }
+}
+
+.addToCart:active {
+  color: var(--red);
+  border:  0.2rem solid var(--red);
 }
 
 .changeAmount {

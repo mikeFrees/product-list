@@ -3,15 +3,103 @@
   border-radius: 1rem;
   font-family: "Red Hat Text", sans-serif;
   color: var(--red);
-  padding: 1rem;
-
+  padding: 1rem 3rem;
+  margin: 4rem;
+  min-width: 35rem;
   h2 {
     font-weight: 700;
     font-size: 2.8rem;
+    text-align:start;
+    padding-bottom: 2rem;
   }
 
   p {
     color: var(--Rose-400);
     font-weight: 600;
+    font-size:1.4rem;
+    padding-bottom: 3rem;
   }
+}
+
+.FullCart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  backGround-color: white;
+  border-radius: 1rem;
+  font-family: "Red Hat Text", sans-serif;
+  color: var(--red);
+  padding: 1rem 3rem;
+  margin: 2rem;
+  text-align: start;
+  h3 {
+    color: var(--Rose-900);
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+
+  p {
+    color: var(--Rose-900);
+    font-weight: 400;
+  }
+
+  .removeButton{
+    padding: 0.2rem;
+    border: 0.2rem solid var(--Rose-300);
+    border-radius: 50%;
+  }
+  .removeButton:active {
+      color: var(--Rose-400);
+  }
+  button {
+    width: 100%;
+    background-color: var(--red);
+    border-radius: 4rem;
+    text-align: center;
+    color: var(--Rose-100);
+    border: none;
+    padding: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom:1rem;
+    align-self: center;
+  }
+
+  button:active {
+    background-color: var(--Rose-100);
+    border: 0.2rem solid var(--red);
+    color: var(--red);
+  }
+}
+.carbon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  text-align: center;  
+  color: var(--Rose-900);
+  background:var(--Rose-100);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 95%;
+  margin: 1rem;
+  align-self: center;
+  
+  p {
+    margin-left: 0.5rem;
+  }
+}
+
+.price {
+  color:var(--Rose-900);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  span {
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+  
 }
