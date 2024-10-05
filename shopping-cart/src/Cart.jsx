@@ -36,7 +36,7 @@ function EmptyCart() {
 }
 
 function FullCart({orderTotal, orderItems}) {
-  const {order, stateChange, updateAmount} = React.useContext(OrderContext);
+  const {order, stateChange, updateAmount, setVisible} = React.useContext(OrderContext);
   let USDollar = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -59,7 +59,7 @@ function FullCart({orderTotal, orderItems}) {
       <p className={styles.price}>Order Total <span>{USDollar.format(orderTotal)}</span></p>
 
       <div className= {styles.carbon}><Tree /><p>This is a <strong>carbon-neutral</strong> delivery</p></div>
-      <button>Confirm Order</button>
+      <button onClick= {() => setVisible(true)}>Confirm Order</button>
     </aside>
   );
 

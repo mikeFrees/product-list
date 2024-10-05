@@ -135,5 +135,6 @@
   .removeButton {
     justify-self: end;
     transform: translateY(-1rem);
+    cursor: pointer;
   }
 }

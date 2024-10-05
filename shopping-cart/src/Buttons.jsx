@@ -55,6 +55,7 @@ export function ButtonArticle({item}) {
       amount: 1,
       itemName: item.name,
       itemPrice: item.price,
+      image: item.image.thumbnail,
     };
     update ? stateChange(oldOrder) : stateChange([...oldOrder, newOrder]);
   }
