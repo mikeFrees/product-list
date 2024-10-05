@@ -1,8 +1,10 @@
+html {
+  background-color: var(--Rose-50);
+}
 .App {
   padding: 10rem;
-  height: 100vh ;
+  height: 100%;
   width: 100vw;
-  background-color: var(--Rose-50);
   text-align: center;
   display: flex;
   align-items: flex-start;

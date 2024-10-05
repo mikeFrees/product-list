@@ -43,9 +43,9 @@ function FullCart({orderTotal, orderItems}) {
   });
 
   const items = order.map( item => (
-    <div key={item.itemName}>
+    <div key={item.itemName} className={styles.cartItem}>
       <h3>{item.itemName}</h3>
-      <p>{item.amount}x  @{USDollar.format(item.itemPrice)}  {USDollar.format(item.itemPrice * item.amount)}</p>
+      <p>{item.amount}x&nbsp;&nbsp;</p><p>@&nbsp;{USDollar.format(item.itemPrice)}</p><p>&nbsp;&nbsp;{USDollar.format(item.itemPrice * item.amount)}</p>
       <Remove className={styles.removeButton} onClick={() => removeArticle(item.itemName)}/>
     </div>
   ));

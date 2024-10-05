@@ -4,7 +4,7 @@
   font-family: "Red Hat Text", sans-serif;
   color: var(--red);
   padding: 1rem 3rem;
-  margin: 4rem;
+  margin: 2rem;
   min-width: 35rem;
   h2 {
     font-weight: 700;
@@ -22,6 +22,7 @@
 }
 
 .FullCart {
+  min-width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,6 +101,39 @@
   span {
     font-size: 3.2rem;
     font-weight: 700;
+  } 
+}
+
+.cartItem {
+  display: grid;
+  width: 100%;
+  height: 6rem;
+  grid-template-columns: repeat(3, min-content) auto;
+  grid-template-rows: repeat(2, 3rem);
+  align-items: center;
+  border-bottom: 0.1rem solid var(--Rose-100);
+  padding-bottom: 1rem;
+
+  p {
+    color: var(--Rose-400);
   }
-  
+
+  p:first-of-type {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  p:nth-of-type(3) {
+    font-weight: 600;
+  }
+
+  h3 {
+    grid-column: 1 / span 4;
+  }
+
+  .removeButton {
+    justify-self: end;
+    transform: translateY(-1rem);
+  }
 }
