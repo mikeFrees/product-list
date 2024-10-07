@@ -26,12 +26,14 @@ export function ConfirmationCard({visible} ) {
 
   return (
     <section className= { visible ? styles.confirmationCard : styles.invisibleConfirmationCard }>
-      <Confirmed />
-      <h2>Order Confirmed</h2>
-      <p>We hope you enjoy your food!</p>
-        { items }
-      <p>Order Total{USDollar.format(orderTotal)}</p>
-      <button onClick={() => resetOrder()}>Start New Order</button>
+      <div className= { styles.card }>
+        <Confirmed />
+        <h2>Order Confirmed</h2>
+        <p>We hope you enjoy your food!</p>
+          { items }
+        <p className= {styles.price}>Order Total<span>{USDollar.format(orderTotal)}</span></p>
+        <button onClick={() => resetOrder()}>Start New Order</button>
+      </div>
     </section>
   );
 }
